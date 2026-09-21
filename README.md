@@ -97,30 +97,35 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 
 ## Sample Answer
 
-<!-- One complete question and answer, pasted as text, with the source line
-     visible. Milestone 4. -->
-
-**Question:**
+**Question:** Over how many evenings does the housing lottery run?
 
 **Answer:**
 
 ```
+The housing lottery runs over four evenings, according to `admin_housing_lottery.txt`.
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.60
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+The covered questions had best distances from 0.188 to 0.366, while the
+out-of-corpus questions ranged from 0.825 to 0.934. The large gap between 0.366
+and 0.825 makes 0.60 a clear dividing point. At this cutoff, the housing
+question reached the model and cited `admin_housing_lottery.txt`, while the
+Mongolia question stopped at the gate with "I don't have enough information
+about that" and made zero model calls.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| Over how many evenings does the housing lottery run? | Yes | 0.366285 |
+| How many times can you change your meal plan per semester? | Yes | 0.239095 |
+| How many midterms are conducted in CS 210? | Yes | 0.303807 |
+| When do parking permits for the west lots go on sale? | Yes | 0.187704 |
+| How much does colour printing cost compared with black-and-white printing? | Yes | 0.315337 |
+| What is the capital of Mongolia? | No | 0.824593 |
+| How do I change the oil in a diesel engine? | No | 0.934011 |
+| Who won the 1994 World Cup? | No | 0.885860 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.844232 |
+| How do I write a for loop in Rust? | No | 0.895998 |
 
 ## How I Used AI
 
