@@ -129,18 +129,18 @@ about that" and made zero model calls.
 
 ## How I Used AI
 
-<!-- Two specific moments. For each: what you asked for, what came back, and
-     what you changed about it.
+**1.** I asked AI to turn my ideas about a "right magnitude and structure" and
+an "arrangement index" into criteria someone could test. It suggested checking
+that all five sampled chunks were complete and 150–600 characters long, and
+that the correct source ranked first for at least four of five questions. I
+kept those measurable versions because they preserve my original ideas while
+making the pass conditions explicit.
 
-     "I asked Claude to write the chunking function from my notes. It ignored
-     the overlap, so I added that myself" is the level of detail we're after.
-     "I used AI to help me code" is not.
-
-     Milestone 5. -->
-
-**1.**
-
-**2.**
+**2.** I asked AI for the fastest chunking strategy that fit the short
+campus-life posts. It produced a paragraph-aware function with a 600-character
+maximum and no overlap. I did not accept the output on code alone: I read the
+five printed chunks and confirmed that each contained understandable facts and
+worked without surrounding text before adding them to this README.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
