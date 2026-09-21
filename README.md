@@ -2,19 +2,6 @@
 
 **Mohammad Nabil Islam — corpus: `campus_life`**
 
-> **This file is your submission.** Fill it in as you go — most sections get
-> written during the milestone that produces them, not at the end.
->
-> How the starter works, and every command you'll need, is in `RUNNING.md`.
-> Leave that file alone.
->
-> **Paste everything as text.** No screenshots, no video. A typed table gets
-> full credit; a picture of the same table gets none.
->
-> Delete these instruction blocks as you replace them. The `<!-- -->` comments
-> are notes to you and don't show up when the page renders — you can leave them
-> or remove them.
-
 ---
 
 # Unit 1
@@ -32,12 +19,9 @@ material is not close enough to support an answer.
 **Chunk size:** Maximum 600 characters
 **Overlap:** 0 characters
 
-The campus-life sources are short, single-topic posts, and the five samples I
-read held useful facts in complete paragraphs. I therefore group complete
-paragraphs up to 600 characters instead of cutting at arbitrary character
-positions. No overlap is needed because paragraph boundaries preserve the
-thoughts without splitting sentences. The resulting 88 chunks range from 178
-to 549 characters, and all five samples below make sense on their own.
+The sources are short, single-topic posts, so I group complete paragraphs up to
+600 characters with no overlap. The 88 resulting chunks range from 178 to 549
+characters, and all five samples make sense on their own.
 
 ## Sample Chunks
 
@@ -107,12 +91,9 @@ The housing lottery runs over four evenings, according to `admin_housing_lottery
 
 **My relevance cutoff:** 0.60
 
-The covered questions had best distances from 0.188 to 0.366, while the
-out-of-corpus questions ranged from 0.825 to 0.934. The large gap between 0.366
-and 0.825 makes 0.60 a clear dividing point. At this cutoff, the housing
-question reached the model and cited `admin_housing_lottery.txt`, while the
-Mongolia question stopped at the gate with "I don't have enough information
-about that" and made zero model calls.
+Covered distances were 0.188–0.366 and unrelated distances were 0.825–0.934,
+so 0.60 sits safely between them. The housing question cited its source, while
+the Mongolia question was refused with zero model calls.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
@@ -129,18 +110,11 @@ about that" and made zero model calls.
 
 ## How I Used AI
 
-**1.** I asked AI to turn my ideas about a "right magnitude and structure" and
-an "arrangement index" into criteria someone could test. It suggested checking
-that all five sampled chunks were complete and 150–600 characters long, and
-that the correct source ranked first for at least four of five questions. I
-kept those measurable versions because they preserve my original ideas while
-making the pass conditions explicit.
+**1.** I asked AI to make my two criteria measurable. It suggested the size
+range and ranking target; I kept them after checking they matched my corpus.
 
-**2.** I asked AI for the fastest chunking strategy that fit the short
-campus-life posts. It produced a paragraph-aware function with a 600-character
-maximum and no overlap. I did not accept the output on code alone: I read the
-five printed chunks and confirmed that each contained understandable facts and
-worked without surrounding text before adding them to this README.
+**2.** I asked AI to draft the paragraph chunker. I read five output chunks and
+kept the approach because each worked on its own.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
